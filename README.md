@@ -17,12 +17,11 @@ The script accesses the PopCat's Vue app instance directly and manipulate the ke
 
 > **NOTICE:** Only 1 browser allowed per device. API rate limit is enforced per IP address.
 
-1. Copy all content of the file: <a href="https://raw.githubusercontent.com/jvloo/popcat-clicker/main/clickbot-v3.min.js" target="_blank">clickbot-v3.min.js</a> *OR* <a href="https://raw.githubusercontent.com/jvloo/popcat-clicker/main/clickbot-v3-with-pop.min.js" target="_blank">clickbot-v3-with-pop.min.js</a> (with click counter)
-2. Visit <a href="https://popcat.click/" target="_blank">https://popcat.click/</a>
-3. Tap `F12` to open browser devtool & navigate to "Console" tab
-4. Tap `Ctrl` + `v` to paste all content into console
-5. Tap `Enter` to run the script
-6. (Optional) Navigate to "Network" tab to check if your API request accepted or rejected (in red text)
+1. Install <a href="https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo" target="_blank">tampermonkey</a> from the browser's webstore
+2. Install <a href="https://geniusxd.github.io/popcat-clicker/clickbot-v4.user.js" target="_blank">clickbot-v4.user.js</a> into tampermonkey
+3. Visit <a href="https://popcat.click/" target="_blank">https://popcat.click/</a>
+4. Tap `Start` to start sending the clicks
+5. (Optional) Navigate to "Network" tab to check if your API request accepted or rejected (in red text)
 
 <img src="https://i.imgur.com/UFYw0hw.png">
 
@@ -41,15 +40,19 @@ The script accesses the PopCat's Vue app instance directly and manipulate the ke
 - If you send 800 clicks or above, system will only record 800 clicks & spam score +1
 - If you hit 10 spam scores, system will mark you as bot & no further clicks will be sent to API
 
-> **UPDATE:** Clearing the bot cookie won't work at script level, because PopCat also set `this.bot` variable to true,
-> unless you clear the cookie & refresh the browser (reload the script).
-> The bot cookie is only useful for them to record you as bot when you refresh the browser.
-> 
-> You may check the script extracted from <a href="https://github.com/jvloo/popcat-clicker/blob/main/popcat-app.html" target="_blank">PopCat's App.vue (line 152)</a>. 
+> **UPDATE:** Auto-clearing cookies is now available on the clickbot-v4
 
 **See the file: <a href="https://github.com/jvloo/popcat-clicker/blob/main/popcat-app.html" target="_blank">popcat-App.html</a>**
 
 ## Changelog
+
+### - Clickbot script V4
+
+- Send 800 clicks per 30 seconds
+- Auto-unban anyone who has been flagged as a bot
+- More user-friendly
+
+**See the file: <a href="https://github.com/GeniusXD/popcat-clicker/blob/main/clickbot-v4.user.js" target="_blank">clickbot-v4.js</a>**
 
 ### - Clickbot script V3
 
